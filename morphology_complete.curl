@@ -1,0 +1,1 @@
+curl -X POST -H "X-RosetteAPI-Key: your_api_key" -H "Content-Type: application/json" -H "Accept: application/json" -H "Cache-Control: no-cache" -d '{"content": "The quick brown fox jumped over the lazy dog. Yes he did."}' "https://api.rosette.com/rest/v1/morphology/complete"
