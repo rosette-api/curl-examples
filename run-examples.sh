@@ -50,7 +50,6 @@ function runExample() {
     result=""
     script="$(sed s/your_api_key/${API_KEY}/ < ./${1})"
     if [ ! -z ${ALT_URL} ]; then
-        echo "ALT_URL: ${ping_url}"
         script=$(echo "${script}" | sed "s#https://api.rosette.com/rest/v1#${ping_url}#")
     fi
     echo $script
