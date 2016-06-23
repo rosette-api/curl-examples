@@ -1,7 +1,7 @@
-curl -X POST 
--H "X-RosetteAPI-Key: your_api_key" 
--H "Content-Type: application/json" 
--H "Accept: application/json" 
--H "Cache-Control: no-cache" 
--d '{"name1": {"text": "Michael Jackson"}, "name2": {"text": "迈克尔·杰克逊"} }' 
+curl -X POST \
+-H "X-RosetteAPI-Key: your_api_key" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Cache-Control: no-cache" \
+-d '{"name1": {"text": "Michael Jackson"}, "name2": {"text": "迈克尔·杰克逊"} }' \
 "https://api.rosette.com/rest/v1/name-similarity"

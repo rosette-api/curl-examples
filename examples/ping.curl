@@ -1,6 +1,6 @@
-curl -X GET 
--H "X-RosetteAPI-Key: your_api_key" 
--H "Content-Type: application/json" 
--H "Accept: application/json" 
--H "Cache-Control: no-cache" 
+curl -X GET \
+-H "X-RosetteAPI-Key: your_api_key" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Cache-Control: no-cache" \
 "https://api.rosette.com/rest/v1/ping"

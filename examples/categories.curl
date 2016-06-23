@@ -1,7 +1,7 @@
-curl -X POST
--H "X-RosetteAPI-Key: your_api_key" 
--H "Content-Type: application/json" 
--H "Accept: application/json" 
--H "Cache-Control: no-cache" 
--d '{"contentUri": "http://www.onlocationvacations.com/2015/03/05/the-new-ghostbusters-movie-begins-filming-in-boston-in-june/" }' 
+curl -X POST \
+-H "X-RosetteAPI-Key: your_api_key" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Cache-Control: no-cache" \
+-d '{"contentUri": "http://www.onlocationvacations.com/2015/03/05/the-new-ghostbusters-movie-begins-filming-in-boston-in-june/" }' \
 "https://api.rosette.com/rest/v1/categories"
