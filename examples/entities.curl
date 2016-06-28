@@ -1,5 +1,3 @@
-# to improve performance, and if you don't need the QID, set this option inside json in -d flag
-# "options": {"linkEntities": false }}
 curl -X POST \
 -H "X-RosetteAPI-Key: your_api_key" \
 -H "Content-Type: application/json" \
