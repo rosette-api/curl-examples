@@ -1,3 +1,7 @@
-# to improve performance, and if you don't need the QID, set this option inside json in -d flag
-# "options": {"linkEntities": false }}
-curl -X POST -H "X-RosetteAPI-Key: your_api_key" -H "Content-Type: application/json" -H "Accept: application/json" -H "Cache-Control: no-cache" -d '{"content": "Bill Murray will appear in new Ghostbusters film: Dr. Peter Venkman was spotted filming a cameo in Boston this… http://dlvr.it/BnsFfS", "genre": "social-media" }' "https://api.rosette.com/rest/v1/entities"
+curl -X POST \
+-H "X-RosetteAPI-Key: your_api_key" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Cache-Control: no-cache" \
+-d '{"content": "Bill Murray will appear in new Ghostbusters film: Dr. Peter Venkman was spotted filming a cameo in Boston this… http://dlvr.it/BnsFfS", "genre": "social-media" }' \
+"https://api.rosette.com/rest/v1/entities"

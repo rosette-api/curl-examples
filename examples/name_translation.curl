@@ -1,1 +1,7 @@
-curl -X POST -H "X-RosetteAPI-Key: your_api_key" -H "Content-Type: application/json" -H "Accept: application/json" -H "Cache-Control: no-cache" -d '{"name": "معمر محمد أبو منيار القذاف", "targetLanguage": "eng", "targetScript": "Latn"}"' "https://api.rosette.com/rest/v1/name-translation"
+curl -X POST \
+-H "X-RosetteAPI-Key: your_api_key" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Cache-Control: no-cache" \
+-d '{"name": "معمر محمد أبو منيار القذاف", "targetLanguage": "eng", "targetScript": "Latn"}"' \
+"https://api.rosette.com/rest/v1/name-translation"

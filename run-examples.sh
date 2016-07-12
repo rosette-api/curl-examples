@@ -48,12 +48,13 @@ function validateURL() {
 function runExample() {
     echo -e "\n---------- ${1} start -------------"
     result=""
-    script="$(sed s/your_api_key/${API_KEY}/ < ./${1})"
+    script="$(sed s/your_api_key/${API_KEY}/ < ./${1})" #replacing your_api_key with actual key
     if [ ! -z ${ALT_URL} ]; then
-        script=$(echo "${script}" | sed "s#https://api.rosette.com/rest/v1#${ping_url}#")
+        script=$(echo "${script}" | sed "s#https://api.rosette.com/rest/v1#${ping_url}#") #replacing api url with alt URL if provided
     fi
-    echo $script
-    result="$(echo ${script} | bash 2>&1)"
+    script=$(echo "${script}" | sed 's~\\~~g' )
+    echo $script #curl -x etc etc
+    result="$(echo ${script} | bash 2>&1)" #run api operation
     echo "${result}"
     echo -e "\n---------- ${1} end -------------"
     for err in "${errors[@]}"; do 
