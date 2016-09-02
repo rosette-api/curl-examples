@@ -1,7 +1,7 @@
 curl -X POST \
--H "X-RosetteAPI-Key: your_api_key" \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Cache-Control: no-cache" \
--d '{"content": "Original Ghostbuster Dan Aykroyd, who also co-wrote the 1984 Ghostbusters film, couldn’t be more pleased with the new all-female Ghostbusters cast, telling The Hollywood Reporter, “The Aykroyd family is delighted by this inheritance of the Ghostbusters torch by these most magnificent women in comedy.”" }' \
-"https://api.rosette.com/rest/v1/sentiment"
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{"content": "Original Ghostbuster Dan Aykroyd, who also co-wrote the 1984 Ghostbusters film, couldn’t be more pleased with the new all-female Ghostbusters cast, telling The Hollywood Reporter, “The Aykroyd family is delighted by this inheritance of the Ghostbusters torch by these most magnificent women in comedy.”" }' \
+    "https://api.rosette.com/rest/v1/sentiment"
