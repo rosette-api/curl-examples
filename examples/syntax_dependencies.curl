@@ -1,0 +1,7 @@
+curl -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{"content": "Sony Pictures is planning to shoot a good portion of the new Ghostbusters in Boston as well.", "genre": "social-media" }' \
+    "https://api.rosette.com/rest/v1/syntax/dependencies"
