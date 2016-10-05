@@ -3,5 +3,5 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
-    -d '{"content": "Sony Pictures is planning to shoot a good portion of the new Ghostbusters in Boston as well.", "genre": "social-media" }' \
+    -d '{"content": "Yoshinori Ohsumi, a Japanese cell biologist, was awarded the Nobel Prize in Physiology or Medicine on Monday.", "genre": "social-media" }' \
     "https://api.rosette.com/rest/v1/syntax/dependencies"
