@@ -3,5 +3,5 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
-    -d '{"content": null }' \
+    -d '{"content": "Cambridge, Massachusetts" }' \
     "https://api.rosette.com/rest/v1/text-embedding"
