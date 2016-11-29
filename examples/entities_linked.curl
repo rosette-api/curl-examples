@@ -1,7 +1,0 @@
-curl -X POST \
-    -H "X-RosetteAPI-Key: your_api_key" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json" \
-    -H "Cache-Control: no-cache" \
-    -d '{"content": "Last month director Paul Feig announced the movie will have an all-star female cast including Kristen Wiig, Melissa McCarthy, Leslie Jones and Kate McKinnon.", "genre": "social-media" }' \
-    "https://api.rosette.com/rest/v1/entities/linked"
