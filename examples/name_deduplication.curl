@@ -1,0 +1,7 @@
+curl -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{"names": [{"text": "John Smith"}, {"text": "Johnathon Smith"}, {"text": "Fred Jones"}] , "threshold": 0.75 }' \
+    "https://api.rosette.com/rest/v1/name-deduplication"

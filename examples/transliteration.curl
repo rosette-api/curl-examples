@@ -1,0 +1,7 @@
+curl -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{"content": "Kareem Abdul Jabbar holds the records for most points in the NBA" }' \
+    "https://api.rosette.com/rest/v1/transliteration"
