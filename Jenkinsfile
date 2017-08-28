@@ -9,7 +9,7 @@ node {
         }
         stage("Run the cUrl Examples") {
             withEnv(["API_KEY=${env.ROSETTE_API_KEY}", "ALT_URL=${env.BINDING_TEST_URL}"]) {
-                sh "./run-examples.sh -a API_KEY=${API_KEY} -u ${ALT_URL}"
+                sh "./run-examples.sh -a ${API_KEY} -u ${ALT_URL}"
             }
         }
         slack(true)
