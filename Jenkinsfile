@@ -8,7 +8,9 @@ node {
             checkout scm
         }
         stage("Run the cUrl Examples") {
-            withEnv(["API_KEY=${env.ROSETTE_API_KEY}", "ALT_URL=${env.BINDING_TEST_URL}"]) {
+            echo "${env.ALT_URL}"
+            def useUrl = ("${env.ALT_URL}" == "null") ? "${env.BINDING_TEST_URL}" : "${env.ALT_URL}"
+            withEnv(["API_KEY=${env.ROSETTE_API_KEY}", "ALT_URL=${useUrl}"]) {
                 sh "./run-examples.sh -a ${API_KEY} -u ${ALT_URL}"
             }
         }
