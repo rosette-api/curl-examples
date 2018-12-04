@@ -15,15 +15,6 @@ function usage {
     exit 1
 }
 
-#Checks if Rosette API key is valid
-function checkAPI {
-    match=$(curl "${ping_url}/ping" -H "X-RosetteAPI-Key: ${API_KEY}" |  grep -o "forbidden")
-    if [ ! -z $match ]; then
-        echo -e "\nInvalid Rosette API Key"
-        exit 1
-    fi  
-}
-
 # strip the trailing slash off of the alt_url if necessary
 function cleanURL() {
     if [ ! -z "${ALT_URL}" ]; then
@@ -36,13 +27,24 @@ function cleanURL() {
     fi
 }
 
-#Checks for valid url
+function checkAPIKey() {
+  output_file=check_key_out.log
+  http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-RosetteAPI-Key: ${API_KEY}" "${service_url}/ping")
+  if [ "${http_status_code}" = "403" ]; then
+      echo -e "\nInvalid Rosette API key.  Output is:\n"
+      cat "${output_file}"
+      exit 1
+  fi
+}
+
 function validateURL() {
-    match=$(curl "${ping_url}/ping" -H "X-RosetteAPI-Key: ${API_KEY}" |  grep -o "Rosette API")
-    if [ "${match}" = "" ]; then
-        echo -e "\n${ping_url} server not responding\n"
+    output_file=validate_url_out.log
+    http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-RosetteAPI-Key: ${API_KEY}" "${service_url}/ping")
+    if [ "${http_status_code}" != "200" ]; then
+        echo -e "\n${service_url} server not responding.  Output is:\n"
+        cat "${output_file}"
         exit 1
-    fi  
+    fi
 }
 
 function runExample() {
@@ -97,7 +99,7 @@ validateURL
 
 #Run the examples
 if [ ! -z ${API_KEY} ]; then
-    checkAPI
+    checkAPIKey
     pushd examples
     if [ ! -z ${FILENAME} ]; then
         runExample ${FILENAME}
