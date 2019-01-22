@@ -3,5 +3,5 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
-    -d '{"content": "spy", "options": {"resultLanguages": ["spa", "deu", "jpn"]}"}' \
+    -d '{"content": "spy", "options": {"resultLanguages": ["spa", "deu", "jpn"]}}' \
     "https://api.rosette.com/rest/v1/semantics/similar"
