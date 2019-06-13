@@ -1,16 +1,21 @@
-# These are cUrl examples for the Rosette API
+## Rosette API
+The Rosette Text Analytics Platform uses natural language processing, statistical modeling, and machine learning to
+analyze unstructured and semi-structured text across 364 language-encoding-script combinations, revealing valuable
+information and actionable data. Rosette provides endpoints for extracting entities and relationships, translating and
+comparing the similarity of names, categorizing and adding linguistic tags to text and more.
 
-Basic Usage
------------
+## Rosette API Access
+- Rosette Cloud [Sign Up](https://developer.rosette.com/signup)
+- Rosette Enterprise [Evaluation](https://www.rosette.com/product-eval/)
 
-There are several ways in which to run the examples:
+## Quick Start
 
-1. Copy the contents of the file, replace `your_api_key` with your Rosette API Key, and paste the command into the command shell
-1. `sed s/your_api_key/ROSETTE_API_KEY/ < example_name.curl | bash
-1. `find . -name "*.curl" -exec sh -c "sed s/your_api_key/ROSETTE_API_KEY/ < {} | bash" \;`
+#### Examples
+View small example programs for each Rosette endpoint
+in the [examples](https://github.com/rosette-api/curl-examples/tree/develop/examples) directory.
 
+#### Documentation & Support
+- [Rosette Platform API](https://developer.rosette.com/features-and-functions)
+- [Rosette Platform Release Notes](https://support.rosette.com/hc/en-us/articles/360018354971-Release-Notes)
+- [Support](https://support.rosette.com)
 
-Additional Information
-----------------------
-
-Visit [Rosette API site](https://developer.rosette.com)
