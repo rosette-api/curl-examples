@@ -1,3 +1,7 @@
+<a href="https://www.rosette.com"><img src="https://s3.amazonaws.com/styleguide.basistech.com/logos/rosette-logo.png" width="181" height="47" /></a>
+
+---
+
 ## Rosette API
 The Rosette Text Analytics Platform uses natural language processing, statistical modeling, and machine learning to
 analyze unstructured and semi-structured text across 364 language-encoding-script combinations, revealing valuable
@@ -11,11 +15,24 @@ comparing the similarity of names, categorizing and adding linguistic tags to te
 ## Quick Start
 
 #### Examples
-View small example programs for each Rosette endpoint
-in the [examples](https://github.com/rosette-api/curl-examples/tree/develop/examples) directory.
+To run all of the example files:
+```
+./run-examples.sh -a $API_KEY
+```
+
+To run a single example file:
+```
+./run-examples.sh -a $API_KEY -f ping.curl
+```
+
+To run all of the example files against an alternate url:
+```
+./run-examples.sh -a $API_KEY -u https://foo.rosette.com/rest/v1
+```
+
+You can view the example call for each endpoint in the [examples](https://github.com/rosette-api/curl-examples/tree/develop/examples) directory.
 
 #### Documentation & Support
 - [Rosette Platform API](https://developer.rosette.com/features-and-functions)
 - [Rosette Platform Release Notes](https://support.rosette.com/hc/en-us/articles/360018354971-Release-Notes)
 - [Support](https://support.rosette.com)
-
