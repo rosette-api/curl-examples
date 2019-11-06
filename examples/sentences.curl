@@ -1,4 +1,4 @@
-curl -X POST \
+curl -s -X POST \
     -H "X-RosetteAPI-Key: your_api_key" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \

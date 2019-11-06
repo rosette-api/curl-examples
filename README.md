@@ -1,16 +1,38 @@
-# These are cUrl examples for the Rosette API
+<a href="https://www.rosette.com"><img src="https://s3.amazonaws.com/styleguide.basistech.com/logos/rosette-logo.png" width="181" height="47" /></a>
 
-Basic Usage
------------
+---
 
-There are several ways in which to run the examples:
+## Rosette API
+The Rosette Text Analytics Platform uses natural language processing, statistical modeling, and machine learning to
+analyze unstructured and semi-structured text across 364 language-encoding-script combinations, revealing valuable
+information and actionable data. Rosette provides endpoints for extracting entities and relationships, translating and
+comparing the similarity of names, categorizing and adding linguistic tags to text and more.
 
-1. Copy the contents of the file, replace `your_api_key` with your Rosette API Key, and paste the command into the command shell
-1. `sed s/your_api_key/ROSETTE_API_KEY/ < example_name.curl | bash
-1. `find . -name "*.curl" -exec sh -c "sed s/your_api_key/ROSETTE_API_KEY/ < {} | bash" \;`
+## Rosette API Access
+- Rosette Cloud [Sign Up](https://developer.rosette.com/signup)
+- Rosette Enterprise [Evaluation](https://www.rosette.com/product-eval/)
 
+## Quick Start
 
-Additional Information
-----------------------
+#### Examples
+To run all of the example files:
+```
+./run-examples.sh -a $API_KEY
+```
 
-Visit [Rosette API site](https://developer.rosette.com)
+To run a single example file:
+```
+./run-examples.sh -a $API_KEY -f ping.curl
+```
+
+To run all of the example files against an alternate url:
+```
+./run-examples.sh -a $API_KEY -u https://foo.rosette.com/rest/v1
+```
+
+You can view the example call for each endpoint in the [examples](https://github.com/rosette-api/curl-examples/tree/develop/examples) directory.
+
+#### Documentation & Support
+- [Rosette Platform API](https://developer.rosette.com/features-and-functions)
+- [Rosette Platform Release Notes](https://support.rosette.com/hc/en-us/articles/360018354971-Release-Notes)
+- [Support](https://support.rosette.com)

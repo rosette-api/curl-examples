@@ -1,0 +1,21 @@
+curl -s -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{ "address1": {
+            "houseNumber": "1600",
+            "road": "Pennsylvania Ave N.W.",
+            "city": "Washington",
+            "state": "D.C.",
+            "postcode": "20500"
+          },
+          "address2": {
+            "houseNumber": "160",
+            "road": "Pennsilvana Ave",
+            "city": "Washington",
+            "state": "D.C.",
+            "postcode": "20500"
+          }
+        }' \
+    "https://api.rosette.com/rest/v1/address-similarity"
