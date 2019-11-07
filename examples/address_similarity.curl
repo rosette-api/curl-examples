@@ -7,12 +7,12 @@ curl -s -X POST \
             "houseNumber": "1600",
             "road": "Pennsylvania Ave N.W.",
             "city": "Washington",
-            "state": "D.C.",
+            "state": "DC",
             "postcode": "20500"
           },
           "address2": {
             "houseNumber": "160",
-            "road": "Pennsilvana Ave",
+            "road": "Pennsilvana Avenue",
             "city": "Washington",
             "state": "D.C.",
             "postcode": "20500"
