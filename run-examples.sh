@@ -60,7 +60,7 @@ function runExample() {
   if [ ! -z ${ALT_URL} ]; then
     script=$(echo "${script}" | sed "s#https://api.rosette.com/rest/v1#${service_url}#") #replacing api url with alt URL if provided
   fi
-  script=$(echo "${script}" | sed 's~\\~~g' )
+  script=$(echo "${script}" | sed 's~\\$~~g' )
   echo $script #curl -x etc etc
   result="$(echo ${script} | bash 2>&1)" #run api operation
   echo "${result}"
