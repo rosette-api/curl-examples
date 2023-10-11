@@ -1,0 +1,7 @@
+curl -s -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \
+    -d '{"content": "Anna attended the marketing meeting earlier today. She did not attend the subsequent meeting afterwards.", "options": {"negation": "BOTH"}}' \
+    "https://api.rosette.com/rest/v1/events"
