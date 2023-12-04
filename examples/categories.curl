@@ -3,5 +3,5 @@ curl -s -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
-    -d '{"contentUri": "https://www.rosette.com/about/" }' \
+    -d '{"contentUri": "https://www.babelstreet.com/rosette/" }' \
     "https://api.rosette.com/rest/v1/categories"
