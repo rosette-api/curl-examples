@@ -3,5 +3,5 @@ curl -s -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
-    -d '{"contentUri": "https://www.rosette.com/about/" }' \
+    -d '{"content": "If you are a fan of the British television series Downton Abbey and you are planning to be in New York anytime before April 2nd, there is a perfect stop for you while in town." }' \
     "https://api.rosette.com/rest/v1/categories"
