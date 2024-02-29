@@ -1,0 +1,7 @@
+curl -s -X POST \
+    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Cache-Control: no-cache" \    
+    -d '{"fields":{"dob2":{"type":"rni_date","weight":0.1},"primaryName":{"type":"rni_name","weight":0.5},"dob":{"type":"rni_date","weight":0.2},"addr":{"type":"rni_address","weight":0.5}},"properties":{"threshold":0.7,"includeExplainInfo":true},"records":{"left":[{"dob2":{"date":"1993/04/16"},"primaryName":{"text":"Ethan R","entityType":"PERSON","language":"eng","languageOfOrigin":"eng","script":"Latn"},"dob":"1993-04-16","addr":"123 Roadlane Ave"},{"primaryName":{"text":"Evan R"},"dob":{"date":"1993-04-16"}}],"right":[{"primaryName":{"text":"Seth R","language":"eng"},"dob":{"date":"1993-04-16"}},{"dob2":{"date":"1993/04/16"},"primaryName":"Ivan R","dob":{"date":"1993-04-16"},"addr":{"address":"123 Roadlane Ave"}}]}}' \
+    "https://api.rosette.com/rest/v1/record-similarity"
