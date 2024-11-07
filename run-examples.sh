@@ -9,7 +9,7 @@ errors=( "Exception" "processingFailure" "badRequest" )
 #Gets called when the user doesn't provide any args
 function usage {
   echo -e "\n${0} -a API_KEY -f [FILENAME] -u [ALT_URL]"
-  echo "  API_KEY      - Rosette API key (required)"
+  echo "  API_KEY      - Babel Street Analytics API key (required)"
   echo "  FILENAME     - Shell script file (optional)"
   echo "  ALT_URL      - Alternate URL (optional)"
   exit 1
@@ -31,7 +31,7 @@ function checkAPIKey() {
   output_file=check_key_out.log
   http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-BabelStreetAPI-Key: ${API_KEY}" "${service_url}/ping")
   if [ "${http_status_code}" = "403" ]; then
-    echo -e "\nInvalid Rosette API key.  Output is:\n"
+    echo -e "\nInvalid Analytics API key.  Output is:\n"
     cat "${output_file}"
     rm "${output_file}"
     exit 1
