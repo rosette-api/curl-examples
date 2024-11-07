@@ -1,6 +1,6 @@
 #!/bin/bash
 
-service_url="https://api.rosette.com/rest/v1"
+service_url="https://analytics.babelstreet.com/rest/v1"
 retcode=0
 errors=( "Exception" "processingFailure" "badRequest" )
 
@@ -29,7 +29,7 @@ function cleanURL() {
 
 function checkAPIKey() {
   output_file=check_key_out.log
-  http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-RosetteAPI-Key: ${API_KEY}" "${service_url}/ping")
+  http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-BabelStreetAPI-Key: ${API_KEY}" "${service_url}/ping")
   if [ "${http_status_code}" = "403" ]; then
     echo -e "\nInvalid Rosette API key.  Output is:\n"
     cat "${output_file}"
@@ -42,7 +42,7 @@ function checkAPIKey() {
 
 function validateURL() {
   output_file=validate_url_out.log
-  http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-RosetteAPI-Key: ${API_KEY}" "${service_url}/ping")
+  http_status_code=$(curl -s -o "${output_file}" -w "%{http_code}" -H "X-BabelStreetAPI-Key: ${API_KEY}" "${service_url}/ping")
   if [ "${http_status_code}" != "200" ]; then
     echo -e "\n${service_url} server not responding.  Output is:\n"
     cat "${output_file}"
@@ -58,7 +58,7 @@ function runExample() {
   result=""
   script="$(sed s/your_api_key/${API_KEY}/ < ./${1})" #replacing your_api_key with actual key
   if [ ! -z ${ALT_URL} ]; then
-    script=$(echo "${script}" | sed "s#https://api.rosette.com/rest/v1#${service_url}#") #replacing api url with alt URL if provided
+    script=$(echo "${script}" | sed "s#https://analytics.babelstreet.com/rest/v1#${service_url}#") #replacing api url with alt URL if provided
   fi
   script=$(echo "${script}" | sed 's~\\$~~g' )
   echo $script #curl -x etc etc
