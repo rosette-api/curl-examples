@@ -1,5 +1,5 @@
 curl -s -X POST \
-    -H "X-RosetteAPI-Key: your_api_key" \
+    -H "X-BabelStreetAPI-Key: your_api_key" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Cache-Control: no-cache" \
@@ -12,4 +12,4 @@ curl -s -X POST \
           },
           "address2": "160 Pennsilvana Avenue, Washington, D.C., 20500"
         }' \
-    "https://api.rosette.com/rest/v1/address-similarity"
+    "https://analytics.babelstreet.com/rest/v1/address-similarity"
